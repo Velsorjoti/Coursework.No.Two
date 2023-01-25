@@ -27,7 +27,7 @@ public class TaskServise {
     }
 
     public Collection<Task> getAllByDate(LocalDate localDate) {
-       return taskMap.values().stream().filter(x->x.equals(localDate)).collect(Collectors.toList());
+       return taskMap.values().stream().filter(x->x.appearsln(localDate)).collect(Collectors.toList());
     }
 
 

@@ -13,10 +13,6 @@ public class WeeklyTask extends Task{
 
     @Override
     public boolean appearsln(LocalDate localDate) {
-        if(localDate.isAfter(getDateTime().toLocalDate()) &&  localDate.equals(getDateTime().toLocalDate()) || localDate.getDayOfWeek() == getDateTime().getDayOfWeek()) {
-            return true;
-        }else {
-            return false;
-        }
+        return localDate.equals(getDateTime().toLocalDate()) || localDate.getDayOfWeek() == getDateTime().getDayOfWeek() && localDate.isAfter(getDateTime().toLocalDate());
     }
 }

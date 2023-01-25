@@ -13,11 +13,7 @@ public class YearlyTask extends Task {
 
     @Override
     public boolean appearsln(LocalDate localDate) {
-        if(localDate.isAfter(getDateTime().toLocalDate()) && localDate.equals(getDateTime().toLocalDate()) || getDateTime().getDayOfYear() == getDateTime().getDayOfYear()) {
-            return true;
-        }else {
-            return false;
-        }
+       return localDate.equals(getDateTime().toLocalDate()) || getDateTime().getDayOfYear() == getDateTime().getDayOfYear() && localDate.isAfter(getDateTime().toLocalDate());
     }
 
 

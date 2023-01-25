@@ -13,11 +13,7 @@ public class MonthlyTask extends Task {
 
     @Override
     public boolean appearsln(LocalDate localDate) {
-        if(localDate.isAfter(getDateTime().toLocalDate()) && localDate.equals(getDateTime().toLocalDate()) || localDate.getDayOfMonth() == getDateTime().getDayOfMonth()) {
-            return true;
-        }else {
-            return false;
-        }
+        return localDate.equals(getDateTime().toLocalDate()) || localDate.getDayOfMonth() == getDateTime().getDayOfMonth() && localDate.isAfter(getDateTime().toLocalDate());
     }
 
 
