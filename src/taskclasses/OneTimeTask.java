@@ -13,11 +13,7 @@ public class OneTimeTask extends Task {
 
     @Override
     public boolean appearsln(LocalDate localDate) {
-        if(localDate.equals(getDateTime().toLocalDate())) {
-            return true;
-        } else {
-            return false;
-        }
+       return localDate.equals(getDateTime().toLocalDate());
     }
 
 
